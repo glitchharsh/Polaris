@@ -2,11 +2,12 @@
 
 {% block content %}
 {% load static %}
+<div class="panel-blocker" id="panel-blocker-location">
+    Please allow Location permission and reload page to use this app
+</div>
 
 <div class="panel">
     <div class="">
-        Please allow Location permission and reload page to use this app
-    </div>
     <h1 class="header">Polaris - Dashboard</h1>
     <div class="set-alarm" id="set-alarm">
         <div class="destination">
@@ -37,9 +38,7 @@
 </div>
 </div>
 
-<div class="canvas" id="canvas">
-    <div class="panel-blocker" id="panel-blocker-location"></div>
-</div>
+<div class="canvas" id="canvas"></div>
 
 <script src="{% static 'js/script.js' %}"></script>
 <script type="text/javascript"
