@@ -1,0 +1,48 @@
+{% extends 'alarm/base.html' %}
+
+{% block content %}
+{% load static %}
+
+<div class="panel">
+    <div class="">
+    <div class="panel-blocker" id="panel-blocker-location">
+        Please allow Location permission and reload page to use this app
+    </div>
+    <h1 class="header">Polaris - Dashboard</h1>
+    <div class="set-alarm" id="set-alarm">
+        <div class="destination">
+            <!-- <h3>Enter your destination</h3> -->
+            <input type="text" name="destination" id="destinationInput">
+        </div>
+        <div class="travel-medium">
+            <input class="radio-input" type="radio" value="road" name="medium" id="road">
+            <label class="radio-label" for="road">Road</label>
+            <input class="radio-input" type="radio" value="rail" name="medium" id="rail">
+            <label class="radio-label" for="rail">Rail</label>
+            <input class="radio-input" type="radio" value="flight" name="medium" id="flight">
+            <label class="radio-label" for="flight">Flight</label>
+        </div>
+        <button class="set-btn" onclick="startAlarm()">Set Alarm</button>
+    </div>
+    <div class="start-alarm" id="start-alarm">
+        <p>Alarm set for <strong id="set-destination1"></strong></p>
+        <p>Estimated distance to go: <strong id="set-distance"></strong></p>
+    </div>
+    <div class="play-alarm" id="play-alarm">
+        <p>You have arrived at <strong id="set-destination2"></strong></p>
+        <button class="set-btn" id="stop-alarm-btn" onclick="stopAlarm()">Stop Alarm</button>
+    </div>
+    <audio src="{% static 'audio/ring.mp3' %}" class="audio" id="audio" preload="auto" loop autoplay controls>
+        Your browser does not support audio
+    </audio>
+</div>
+</div>
+
+<div class="canvas" id="canvas"></div>
+
+<script src="{% static 'js/script.js' %}"></script>
+<script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key={{key}}&libraries=places&callback=initGoogle"
+    defer>
+    </script>
+{% endblock content %}
