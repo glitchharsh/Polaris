@@ -19,7 +19,7 @@ body{
     height: 100vh;
     width: 100%;
     box-shadow: inset 0px 0px 150px -50px black;
-    background-image: url(http://localhost:8000/static/img/bg.jpg);
+    background-image: url(https://polaris-app-git-main-harshs-projects-12d1c343.vercel.app/static/img/bg.jpg);
     background-position: center;
     background-size: cover;
     z-index: -1;
