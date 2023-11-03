@@ -23,4 +23,6 @@ from django.views.generic.base import RedirectView
 urlpatterns = [
     path('', include("alarm.urls")),
     path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url("img/ico.png")))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
