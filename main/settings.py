@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8a$^06pm3ogeqyvi@p)rl)!dtvck_cyncc0c-dt76qitd3n)i9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', 'polaris.harshp.in']
 
 GCLOUD_KEY = os.environ.get("GCLOUD_KEY")
 
