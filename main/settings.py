@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8a$^06pm3ogeqyvi@p)rl)!dtvck_cyncc0c-dt76qitd3n)i9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 GCLOUD_KEY = os.environ.get("GCLOUD_KEY")
 
@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'main.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lqfgfuyy',
-        'USER': 'lqfgfuyy',
-        'PASSWORD': 'j0awPrAakAid8jb6KLUYca-nYAX-2xPT',
-        'HOST': 'floppy.db.elephantsql.com',
+        'NAME': os.environ.get("NAME"),
+        'USER': os.environ.get("USER"),
+        'PASSWORD': os.environ.get("PASSWORD"),
+        'HOST': os.environ.get("HOST"),
         'PORT': ''
     }
     
