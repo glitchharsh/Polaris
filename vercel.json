@@ -10,5 +10,6 @@
             "dest": "main/wsgi.py"
         }
     ],
-    "outputDirectory": "build"
+    "outputDirectory": "build",
+    "output": "build"
 }
